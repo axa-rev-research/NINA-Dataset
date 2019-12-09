@@ -31,24 +31,23 @@ fi
 
 labelsFolder=$1
 outputFolder=$2
-
+[ ! -e ${outputFolder} ] && mkdir ${outputFolder}
 
 for labelFile in $(ls ${labelsFolder} | grep txt); do
   counter=1
   videoID=$(echo ${labelFile} | cut -d '.' -f1)
   echo -e "Downloading and trimming file ${labelFile} ..."
-  youtube-dl -f bestaudio --extract-audio --audio-format wav --audio-quality 0 -o "${videoID}.wav" "https://www.youtube.com/watch?v=${videoID}"
+  youtube-dl -f bestaudio --extract-audio --audio-format wav --audio-quality 0  --output "%(id)s.%(ext)s" "https://www.youtube.com/watch?v=${videoID}"
   for line in $(cat ${labelsFolder}/${labelFile}  | gsed -e "s/\r/\n/g" | grep -v "^\\\\"); do
     startTime=$(echo ${line} | awk '{print $1}')
     stopTime=$(echo ${line} | awk '{print $2}')
     category=$(echo ${line} | awk '{print $3}')
     [ ! -e ${outputFolder}/${category} ] && mkdir ${outputFolder}/${category}
-    trimmedFileName="${outputFolder}/${videoID}_${counter}-${category}.wav"   # ex. filename trimmed: 2mzHohHcvJk_22-crash.wav
+    trimmedFileName="${outputFolder}/${category}/${videoID}_${counter}-${category}.wav"   # ex. filename trimmed: 2mzHohHcvJk_22-crash.wav
     [ -e  ${trimmedFileName} ] && rm ${trimmedFileName}
-    sox ${trimmedFileName} "${videoID}.wav" trim ${startTime} ${stopTime}
+    sox -t wav "${videoID}.wav" ${trimmedFileName} trim ${startTime} =${stopTime}
     counter=$(($counter+1))
   done
   rm  "${videoID}.wav"
-  echo -e "Done\n"
 done
-
+echo "DONE!"
