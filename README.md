@@ -25,3 +25,9 @@ In order to run this script, you should have already installed:
 $ bash datasetCreation.sh ./labels/ ./output
 ```
 This will create a output folder with a sub-folder per category, including wav files.
+
+## Contribution/Extension
+
+1. Add the new video youtube id and title to the youtube_IDs.csv.
+2. Use Audacity to annotate the file.
+3. Save the annotation in a txt file in the labels folder.
