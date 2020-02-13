@@ -28,6 +28,6 @@ This will create a output folder with a sub-folder per category, including wav f
 
 ## Contribution/Extension
 
-1. Add the new video youtube id and title to the youtube_IDs.csv.
+1. Add the new video_youtube_id and realtive title to the youtube_IDs.csv file.
 2. Use Audacity to annotate the file.
-3. Save the annotation in a txt file in the labels folder.
+3. Save the annotation in a video_youtube_id.txt file in the labels folder.
