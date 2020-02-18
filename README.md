@@ -1,5 +1,6 @@
 # DeepCrashzam-Dataset
 Script to create the crash sound dataset. Sounds are recorded inside the car cabin with dashcam or smartphone.
+
 Categories:
 - Crash
 - Driving
@@ -9,6 +10,11 @@ Categories:
 - People taking
 - People screaming
 - Music
+- Pothole
+- Meteo (strong rain/hail)
+- Police siren
+- Ambulance siren
+- Firetruck siren
 
 ## Requirements
 In order to run this script, you should have already installed:
