@@ -17,6 +17,11 @@ labelsFolder=$1
 outputFolder=$2
 [ ! -e ${outputFolder} ] && mkdir ${outputFolder}
 
+system=$(uname)
+if [[ "$system" == 'Linux' ]]; then
+   alias gsed='sed'
+fi
+
 fileCounter=1
 totFiles=$(ls ${labelsFolder} | grep txt | wc -l)
 for labelFile in $(ls ${labelsFolder} | grep txt); do

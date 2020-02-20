@@ -20,6 +20,7 @@ Categories:
 In order to run this script, you should have already installed:
 - youtube-dl
 - sox
+- gsed (macOS only)
 
 ## Files
 - dasetCreation.sh: the main script
