@@ -35,7 +35,7 @@ for labelFile in $(ls ${labelsFolder} | grep txt); do
     continue
   fi
   echo -e "Downloading and trimming file ${labelFile} ..."
-  youtube-dl -f bestaudio --extract-audio --audio-format wav --audio-quality 0  --output "%(id)s.%(ext)s" "https://www.youtube.com/watch?v=${videoID}"
+  youtube-dl --force-ipv4 -f bestaudio --extract-audio --audio-format wav --audio-quality 0  --output "%(id)s.%(ext)s" "https://www.youtube.com/watch?v=${videoID}"
   for line in $(cat ${labelsFolder}/${labelFile}  | gsed -e "s/\r/\n/g" | grep -v "^\\\\"); do
     startTime=$(echo ${line} | awk '{print $1}')
     stopTime=$(echo ${line} | awk '{print $2}')
@@ -46,6 +46,7 @@ for labelFile in $(ls ${labelsFolder} | grep txt); do
     sox -t wav "${videoID}.wav" ${trimmedFileName} trim ${startTime} =${stopTime}
     counter=$(($counter+1))
   done
-  rm  "${videoID}.wav"
+  rm  "./${videoID}.wav"
+  sleep 120  # throttling to avoid "Youtube Error 429 Too many requests"
 done
 echo "DONE!"
