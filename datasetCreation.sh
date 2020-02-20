@@ -25,7 +25,7 @@ for labelFile in $(ls ${labelsFolder} | grep txt); do
   progress=$(echo "scale=2;${fileCounter}/${totFiles}*100" | bc -l)
   echo "Progress=${progress}%"
   videoID=$(echo ${labelFile} | cut -d '.' -f1)
-  isAlreadyPresent=$(ls -R ${outputFolder} | wc -l)
+  isAlreadyPresent=$(ls -R ${outputFolder} | grep ${videoID} | wc -l)
   if [ "${isAlreadyPresent}" -gt 0 ]; then  # Skipping already downloaded files for incremental dataset creation
     continue
   fi
