@@ -25,6 +25,10 @@ for labelFile in $(ls ${labelsFolder} | grep txt); do
   progress=$(echo "scale=2;${fileCounter}/${totFiles}*100" | bc -l)
   echo "Progress=${progress}%"
   videoID=$(echo ${labelFile} | cut -d '.' -f1)
+  isAlreadyPresent=$(ls -R ${outputFolder} | wc -l)
+  if [ "${isAlreadyPresent}" -gt 0 ]; then  # Skipping already downloaded files for incremental dataset creation
+    continue
+  fi
   echo -e "Downloading and trimming file ${labelFile} ..."
   youtube-dl -f bestaudio --extract-audio --audio-format wav --audio-quality 0  --output "%(id)s.%(ext)s" "https://www.youtube.com/watch?v=${videoID}"
   for line in $(cat ${labelsFolder}/${labelFile}  | gsed -e "s/\r/\n/g" | grep -v "^\\\\"); do
