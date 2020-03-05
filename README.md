@@ -7,7 +7,6 @@ Categories:
 - Tire skidding
 - Horn
 - Harsh acceleration
-- People taking
 - People talking
 - People screaming
 - Music
@@ -61,3 +60,4 @@ publisher="Springer International Publishing",
 pages="159--180",
 isbn="978-3-030-26633-2"
 }
+```
