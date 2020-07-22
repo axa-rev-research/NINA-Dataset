@@ -74,17 +74,37 @@ https://thinkmobile.dev/automate-testing-of-tensorflow-lite-model-implementation
 
 ## Acknowledgement
 
-If you use this dataset, please cite it:
+If you use this dataset, please cite the following works:
 
 ```
-@InProceedings{10.1007/978-3-030-26633-2_8,
-author="Sammarco, Matteo and Detyniecki, Marcin",
-editor="Donnellan, Brian and Klein, Cornel and Helfert, Markus and Gusikhin, Oleg",
-title="Car Accident Detection and Reconstruction Through Sound Analysis with Crashzam",
-booktitle="Smart Cities, Green Technologies and Intelligent Transport Systems",
-year="2019",
-publisher="Springer International Publishing",
-pages="159--180",
-isbn="978-3-030-26633-2"
+@inproceedings{sammarco:2019:crashzam,
+	Address     = {Cham},
+	Author      = {Sammarco, Matteo and Detyniecki, Marcin},
+	Booktitle   = {Smart Cities, Green Technologies and Intelligent Transport Systems},
+	Editor      = {Donnellan, Brian and Klein, Cornel and Helfert, Markus and Gusikhin, Oleg},
+	Isbn        = {978-3-030-26633-2},
+	Pages       = {159--180},
+	Publisher   = {Springer International Publishing},
+	Title       = {Car Accident Detection and Reconstruction Through Sound Analysis with Crashzam},
+	Year        = {2019}}
+}
+```
+
+```
+@inproceedings{sammarco:2018:crashzam,
+      author    = {Sammarco, Matteo and Detyniecki, Marcin},
+      editor    = {Markus Helfert and Oleg Gusikhin},
+      title     = {Crashzam: Sound-based Car Crash Detection},
+      booktitle = {Proceedings of the 4th International Conference on Vehicle Technology
+               and Intelligent Transport Systems, {VEHITS} 2018, Funchal, Madeira,
+               Portugal, March 16-18, 2018},
+      pages     = {27--35},
+      publisher = {SciTePress},
+      year      = {2018},
+      url       = {https://doi.org/10.5220/0006629200270035},
+      doi       = {10.5220/0006629200270035},
+      timestamp = {Mon, 30 Apr 2018 15:04:00 +0200},
+      biburl    = {https://dblp.org/rec/conf/vehits/SammarcoD18.bib},
+      bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```
