@@ -41,8 +41,9 @@ This will create a output folder with a sub-folder per category, including wav f
 ## Contribution/Extension
 
 1. Add the new {video_youtube_id} and relative title to the youtube_IDs.csv file.
-2. Use Audacity to annotate the file.
-      - Open the file in Audacity
+2. Use Audacity or Elan (https://archive.mpi.nl/tla/elan) to annotate the file. 
+	Procedure for Audacity:
+      - Open the file
       - Right click on the track -> split stereo to mono and delete one of the two tracks
       - Track menu -> add new track- > label track
       - Select part and them command+b (or ctrl+b) to add the label
