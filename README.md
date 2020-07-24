@@ -41,8 +41,7 @@ This will create a output folder with a sub-folder per category, including wav f
 ## Contribution/Extension
 
 1. Add the new {video_youtube_id} and relative title to the youtube_IDs.csv file.
-2. Use Audacity or Elan (https://archive.mpi.nl/tla/elan) to annotate the file. 
-	Procedure for Audacity:
+2. Use Audacity to annotate the file. 
       - Open the file
       - Right click on the track -> split stereo to mono and delete one of the two tracks
       - Track menu -> add new track- > label track
@@ -50,6 +49,13 @@ This will create a output folder with a sub-folder per category, including wav f
       - Edit menu -> Labels -> edit labels -> check and export into a file named {video_youtube_id}.txt
       - Finally to save clips: File menu -> Export -> Export Multiple. Option: split files based on Labels and Name files numbering before Label/track name. At this point file name has this convention {video_youtube_id}_{2_digits_counter}-category (e.g., HRamesEI1Iw_39-ambulance.wav) 
 3. Save the annotation in a video_youtube_id.txt file in the labels folder.
+
+If you prefere a different tool for annotation (e.g. Elan https://archive.mpi.nl/tla/elan), be sure that the video_youtube_id.txt file is in the format:
+```
+starting_time ending_time label_1
+starting_time ending_time label_2
+...
+```
 
 
 ## Wavenet audio generation
