@@ -1,4 +1,4 @@
-# DeepCrashzam-Dataset
+# Naturalistic IN-vehicle Audio Dataset
 Script to create the crash sound dataset. Sounds are recorded inside the car cabin (apart from some EV sirens) with dashcam or smartphone mic.
 
 Categories:
