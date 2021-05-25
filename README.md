@@ -1,20 +1,27 @@
 # Naturalistic IN-vehicle Audio Dataset
-Script to create the crash sound dataset. Sounds are recorded inside the car cabin (apart from some EV sirens) with dashcam or smartphone mic.
+
+The NINA dataset is a collection of sounds generated inside and outside (EV sirens) a car cabin. It is intented for research purposes.
+In this repository, we provide a script to create the dataset. Sounds are recorded with dashcam or smartphone mic. As recordings are taken in a not controlled environment, we do not have the vehicle speed or the specific recording device model or microphone detail.
+
+
 
 Categories:
-- Crash
-- Driving
-- Tire skidding
-- Horn
-- Harsh acceleration
-- People talking
-- People screaming
-- Music
-- Pothole
-- Meteo (strong rain/hail)
-- Police siren
-- Ambulance siren
-- Firetruck siren
+
+|           Class          | Clip | Total Duration [sec] |
+|:------------------------:|:----:|:--------------:|
+| Crash                    |  751 |       865      |
+| Driving                  |  295 |      1086      |
+| Tire skidding            |  186 |       208      |
+| Horn                     |  261 |       314      |
+| Harsh acceleration       |  22  |       63       |
+| Talking                  |  265 |       653      |
+| Screaming                |  157 |       113      |
+| Music                    |  198 |       821      |
+| Pothole                  |  144 |       138      |
+| Meteo (strong rain/hail) |  94  |      3613      |
+| Police siren             |  39  |       288      |
+| Ambulance siren          |  159 |      1253      |
+| Firetruck siren          |  76  |       822      |
 
 ## Requirements
 In order to run this script, you should have already installed:
