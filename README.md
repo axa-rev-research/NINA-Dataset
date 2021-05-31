@@ -1,7 +1,9 @@
 # Naturalistic IN-vehicle Audio Dataset
 
 The NINA dataset is a collection of sounds generated inside and outside (EV sirens) a car cabin. It is intented for research purposes.
-In this repository, we provide a script to create the dataset. Sounds are recorded with dashcam or smartphone mic. As recordings are taken in a not controlled environment, we do not have the vehicle speed or the specific recording device model or microphone detail.
+In this repository, we provide a script to create the dataset. 
+
+Sounds are recorded with dashcam or smartphone mic. As recordings are taken in a not controlled environment, we do not have the vehicle speed or the specific recording device model or microphone detail.
 
 
 
